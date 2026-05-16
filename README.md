@@ -10,27 +10,15 @@ This world was designed by my lecturer in Sheffield Hallam University and I slig
 
 A sped-up demo video showing the robot completing the maze is included in the repository.
 
-![image](textures/world.png)
 
-
-
-## Demo# A Multimodal Artificial Intelligence Architecture for Autonomous Robot Navigation
-
-
-
-This project implements a vision-driven autonomous robot navigation system in Webots using an e-puck robot. The robot navigates a maze using OCR-based sign reading, simple NLP interpretation and sensor-based obstacle avoidance.
-
-This world was designed by my lecturer in Sheffield Hallam University and I slightly modified the world for my task. 
-
-
-
-A sped-up demo video showing the robot completing the maze is included in the repository.
+World Image
 
 ![image](textures/world.png)
 
 
 
 ## Demo
+
 
 [Watch Full Demo Video](textures/demo.mp4)
 
@@ -175,7 +163,7 @@ In robotics, optimal performance often depends on a trade-off between speed and 
 
 
 
- ## Repository Structure
+## Repository Structure
 
 
 ```text
@@ -209,8 +197,8 @@ textures/
 
 
 
- ## How to Run
-=======
+## How to Run
+
 
 
 
@@ -229,7 +217,7 @@ textures/
 
 
 
- ## System Overview
+## System Overview
 
 
 
@@ -245,7 +233,7 @@ textures/
 
 
 
- ## Optional Improvements
+## Optional Improvements
 
 
 
@@ -283,7 +271,7 @@ This can be extended to microphone input for real-time commands.
 
 
 
- ## Design Philosophy
+## Design Philosophy
 
 
 
@@ -295,7 +283,7 @@ This can be extended to microphone input for real-time commands.
 
 
 
- ## Summary
+## Summary
 
 
 
@@ -343,7 +331,7 @@ The robot is designed to:
 
 
 
- # System Architecture
+# System Architecture
 
 
 
@@ -433,7 +421,7 @@ The system compares two navigation strategies:
 
 
 
- ### Version 1: Recommended for speed
+### Version 1: Recommended for speed
 
  - Lightweight FSM controller.
 
@@ -445,7 +433,7 @@ The system compares two navigation strategies:
 
 
 
- ### Version 2: More advanced
+### Version 2: More advanced
 
  - Vision and sensor fusion control.
 
@@ -461,7 +449,7 @@ In robotics, optimal performance often depends on a trade-off between speed and 
 
 
 
- ## Repository Structure
+## Repository Structure
 
 
 
@@ -495,7 +483,7 @@ textures/
 
 
 
- ## How to Run
+## How to Run
 
 
 
@@ -513,7 +501,7 @@ textures/
 
 
 
- ## System Overview
+## System Overview
 
 
 
@@ -529,7 +517,7 @@ textures/
 
 
 
- ## Optional Improvements
+## Optional Improvements
 
 
 
@@ -567,7 +555,7 @@ This can be extended to microphone input for real-time commands.
 
 
 
- ## Design Philosophy
+## Design Philosophy
 
 
 
@@ -579,7 +567,7 @@ This can be extended to microphone input for real-time commands.
 
 
 
- ## Summary
+## Summary
 
 
 
