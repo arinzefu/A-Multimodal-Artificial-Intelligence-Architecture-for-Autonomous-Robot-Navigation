@@ -1,4 +1,4 @@
-\# A Multimodal Artificial Intelligence Architecture for Autonomous Robot Navigation
+# A Multimodal Artificial Intelligence Architecture for Autonomous Robot Navigation
 
 
 
@@ -10,19 +10,19 @@ This world was designed by my lecturer in Sheffield Hallam University and I slig
 
 A sped-up demo video showing the robot completing the maze is included in the repository.
 
-!\[image](textures/world.png)
+![image](textures/world.png)
 
 
 
-\## Demo
+## Demo
 
-\[Watch Full Demo Video](textures/demo.mp4)
+[Watch Full Demo Video](textures/demo.mp4)
 
 This is sped-up video showing full maze completion.
 
 
 
-\## Project Goal
+## Project Goal
 
 
 
@@ -30,101 +30,101 @@ The robot is designed to:
 
 
 
-\- Detect signs in the environment using a camera.
+ - Detect signs in the environment using a camera.
 
-\- Extract text using OCR (EasyOCR).
+ - Extract text using OCR (EasyOCR).
 
-\- Convert text into navigation commands.
+ - Convert text into navigation commands.
 
-\- Approach signs and execute actions.
+ - Approach signs and execute actions.
 
-\- Reach the maze exit autonomously.
-
-
-
-\## Key Idea
+ - Reach the maze exit autonomously.
 
 
 
-\# System Architecture
+ ## Key Idea
+
+
+
+ # System Architecture
 
 
 
 ```text
 
-&#x20;                   +-------------------+
+                    +-------------------+
 
-&#x20;                   |      SEARCH       |
+                    |      SEARCH       |
 
-&#x20;                   | Capture Image     |
+                    | Capture Image     |
 
-&#x20;                   | OCR + NLP         |
+                    | OCR + NLP         |
 
-&#x20;                   +---------+---------+
+                    +---------+---------+
 
-&#x20;                             |
+                              |
 
-&#x20;                             v
+                              v
 
-&#x20;                   +-------------------+
+                    +-------------------+
 
-&#x20;                   |   APPROACH\_SIGN   |
+                    |   APPROACH _SIGN   |
 
-&#x20;                   | Track Sign        |
+                    | Track Sign        |
 
-&#x20;                   | Navigate Forward  |
+                    | Navigate Forward  |
 
-&#x20;                   +---------+---------+
+                    +---------+---------+
 
-&#x20;                             |
+                              |
 
-&#x20;                             v
+                              v
 
-&#x20;                   +-------------------+
+                    +-------------------+
 
-&#x20;                   |   EXECUTE\_TURN    |
+                    |   EXECUTE _TURN    |
 
-&#x20;                   | Speak Command     |
+                    | Speak Command     |
 
-&#x20;                   | Perform Turn      |
+                    | Perform Turn      |
 
-&#x20;                   +---------+---------+
+                    +---------+---------+
 
-&#x20;                             |
+                              |
 
-&#x20;                             v
+                              v
 
-&#x20;                   +-------------------+
+                    +-------------------+
 
-&#x20;                   | FORWARD\_AFTER\_TURN|
+                    | FORWARD _AFTER _TURN|
 
-&#x20;                   | Stabilize Motion  |
+                    | Stabilize Motion  |
 
-&#x20;                   | Exit Junction     |
+                    | Exit Junction     |
 
-&#x20;                   +---------+---------+
+                    +---------+---------+
 
-&#x20;                             |
+                              |
 
-&#x20;                             v
+                              v
 
-&#x20;                   +-------------------+
+                    +-------------------+
 
-&#x20;                   |      SEARCH       |
+                    |      SEARCH       |
 
-&#x20;                   +---------+---------+
+                    +---------+---------+
 
-&#x20;                             |
+                              |
 
-&#x20;                             v
+                              v
 
-&#x20;                   +-------------------+
+                    +-------------------+
 
-&#x20;                   |       STOP        |
+                    |       STOP        |
 
-&#x20;                   | Maze Complete     |
+                    | Maze Complete     |
 
-&#x20;                   +-------------------+
+                    +-------------------+
 
 
 
@@ -136,27 +136,27 @@ The system compares two navigation strategies:
 
 
 
-\### Version 1: Recommended for speed
+ ### Version 1: Recommended for speed
 
-\- Lightweight FSM controller.
+ - Lightweight FSM controller.
 
-\- Minimal computation.
+ - Minimal computation.
 
-\- Fast maze completion, about 3 minutes.
+ - Fast maze completion, about 3 minutes.
 
-\- Uses simple sensor thresholds and OCR trigger logic.
+ - Uses simple sensor thresholds and OCR trigger logic.
 
 
 
-\### Version 2: More advanced
+ ### Version 2: More advanced
 
-\- Vision and sensor fusion control.
+ - Vision and sensor fusion control.
 
-\- Bounding box tracking and smoother navigation.
+ - Bounding box tracking and smoother navigation.
 
-\- Path recording with CSV export.
+ - Path recording with CSV export.
 
-\- More robust, but slower due to extra computation.
+ - More robust, but slower due to extra computation.
 
 
 
@@ -164,7 +164,7 @@ In robotics, optimal performance often depends on a trade-off between speed and 
 
 
 
-\## Repository Structure
+ ## Repository Structure
 
 
 
@@ -172,81 +172,81 @@ In robotics, optimal performance often depends on a trade-off between speed and 
 
 controllers/
 
-&#x20;   ├── version1\_controller.py
+    ├── version1 _controller.py
 
-&#x20;   ├── version2\_controller.py
+    ├── version2 _controller.py
 
 
 
 worlds/
 
-&#x20;   ├── ArinzeMaze.wbt
+    ├── ArinzeMaze.wbt
 
 
 
 protos/
 
-&#x20;   ├── e-puck robot definition
+    ├── e-puck robot definition
 
 
 
 textures/
 
-&#x20;   ├── images used in world design
+    ├── images used in world design
 
 ```
 
 
 
-\## How to Run
+ ## How to Run
 
 
 
-1\. Install Webots: \[https://cyberbotics.com/](https://cyberbotics.com/)
+1 . Install Webots:  [https://cyberbotics.com/](https://cyberbotics.com/)
 
-2\. Open the project:
+2 . Open the project:
 
-&#x20;  - `worlds/ArinzeMaze.wbt`
+   - `worlds/ArinzeMaze.wbt`
 
-3\. Run either controller:
+3 . Run either controller:
 
-&#x20;  - Version 1 for a faster solution.
+   - Version 1 for a faster solution.
 
-&#x20;  - Version 2 for improved robustness.
-
-
-
-\## System Overview
+   - Version 2 for improved robustness.
 
 
 
-\- Computer Vision: OpenCV + EasyOCR.
-
-\- Control: Finite State Machine (FSM).
-
-\- Navigation: Differential drive + IMU.
-
-\- Sensors: 8× proximity sensors.
-
-\- Output: Speech synthesis + motion execution.
+ ## System Overview
 
 
 
-\## Optional Improvements
+ - Computer Vision: OpenCV + EasyOCR.
+
+ - Control: Finite State Machine (FSM).
+
+ - Navigation: Differential drive + IMU.
+
+ - Sensors: 8× proximity sensors.
+
+ - Output: Speech synthesis + motion execution.
 
 
 
-1\. Transformer-based NLP instead of rule-based NLP.
-
-&#x20;  - Improves robustness in interpreting signs.
-
-&#x20;  - Increases compute cost.
+ ## Optional Improvements
 
 
 
-2\. Speech recognition with OpenAI Whisper.
+1 . Transformer-based NLP instead of rule-based NLP.
 
-&#x20;  - Allows voice-driven interaction.
+   - Improves robustness in interpreting signs.
+
+   - Increases compute cost.
+
+
+
+2 . Speech recognition with OpenAI Whisper.
+
+   - Allows voice-driven interaction.
 
 
 
@@ -256,11 +256,11 @@ import whisper
 
 
 
-model = whisper.load\_model("turbo")
+model = whisper.load _model("turbo")
 
 result = model.transcribe("audio.mp3")
 
-print(result\["text"])
+print(result ["text"])
 
 ```
 
@@ -270,19 +270,19 @@ This can be extended to microphone input for real-time commands.
 
 
 
-\## Design Philosophy
+ ## Design Philosophy
 
 
 
-\- Version 1: prioritize speed and simplicity.
+ - Version 1: prioritize speed and simplicity.
 
-\- Version 2: prioritize perception quality and robustness.
+ - Version 2: prioritize perception quality and robustness.
 
-\- The core trade-off is computational cost versus navigation accuracy.
+ - The core trade-off is computational cost versus navigation accuracy.
 
 
 
-\## Summary
+ ## Summary
 
 
 
@@ -290,11 +290,11 @@ This project demonstrates a full multimodal robotics pipeline:
 
 
 
-\- Perception: camera + OCR.
+ - Perception: camera + OCR.
 
-\- Reasoning: NLP.
+ - Reasoning: NLP.
 
-\- Control: FSM + sensors.
+ - Control: FSM + sensors.
 
-\- Execution: robot motion.
+ - Execution: robot motion.
 
